@@ -253,7 +253,7 @@ namespace Steamworks
 		{
 			try
 			{
-				OnMessage( msg->DataPtr, msg->DataSize, msg->RecvTime, msg->MessageNumber, msg->Channel );
+				OnMessage( msg->DataPtr, msg->DataSize, msg->Flags, msg->RecvTime, msg->MessageNumber, msg->Channel );
 			}
 			finally
 			{
@@ -265,7 +265,7 @@ namespace Steamworks
 			}
 		}
 
-		public virtual void OnMessage( IntPtr data, int size, long messageNum, long recvTime, int channel )
+		public virtual void OnMessage( IntPtr data, int size, SendType flags, long messageNum, long recvTime, int channel )
 		{
 			Interface?.OnMessage( data, size, messageNum, recvTime, channel );
 		}

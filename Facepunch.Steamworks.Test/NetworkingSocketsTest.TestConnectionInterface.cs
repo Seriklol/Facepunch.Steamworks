@@ -81,7 +81,7 @@ namespace Steamworks
 				}
 			}
 
-			public override unsafe void OnMessage( IntPtr data, int size, long messageNum, long recvTime, int channel )
+			public override unsafe void OnMessage( IntPtr data, int size, SendType flags, long messageNum, long recvTime, int channel )
 			{
 				// We're only sending strings, so it's fine to read this like this
 				var str = Utility.Utf8NoBom.GetString( (byte*) data, size );
