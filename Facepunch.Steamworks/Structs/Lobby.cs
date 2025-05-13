@@ -8,7 +8,7 @@ namespace Steamworks.Data
 	/// <summary>
 	/// Represents a Steam lobby.
 	/// </summary>
-	public struct Lobby
+	public struct Lobby : ILobby
 	{
 		public SteamId Id { get; internal set; }
 
@@ -57,7 +57,7 @@ namespace Steamworks.Data
 		/// <summary>
 		/// Returns current members in the lobby. The current user must be in the lobby in order to see the users.
 		/// </summary>
-		public IEnumerable<Friend> Members
+		public IEnumerable<IFriend> Members
 		{
 			get
 			{
@@ -118,7 +118,7 @@ namespace Steamworks.Data
 		/// <summary>
 		/// Gets per-user metadata for someone in this lobby.
 		/// </summary>
-		public string GetMemberData( Friend member, string key )
+		public string GetMemberData( IFriend member, string key )
 		{
 			return SteamMatchmaking.Internal.GetLobbyMemberData( Id, member.Id, key );
 		}
@@ -265,7 +265,7 @@ namespace Steamworks.Data
 		/// <summary>
 		/// Gets or sets the owner of the lobby. You must be the lobby owner to set the owner
 		/// </summary>
-		public Friend Owner
+		public IFriend Owner
 		{
 			get => new Friend( SteamMatchmaking.Internal.GetLobbyOwner( Id ) );
 			set => SteamMatchmaking.Internal.SetLobbyOwner( Id, value.Id );

@@ -7,9 +7,9 @@ using Steamworks.Data;
 
 namespace Steamworks
 {
-	public struct Friend
+	public struct Friend : IFriend
 	{
-		public SteamId Id;
+		public SteamId Id { get; set; }
 
 		public Friend( SteamId steamid )
 		{

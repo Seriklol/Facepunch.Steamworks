@@ -217,7 +217,7 @@ namespace Steamworks.Data
 		/// <summary>
 		/// Run the query, get the matching lobbies
 		/// </summary>
-		public async Task<Lobby[]> RequestAsync()
+		public async Task<ILobby[]> RequestAsync()
 		{
 			ApplyFilters();
 
@@ -227,7 +227,7 @@ namespace Steamworks.Data
 				return null;
 			}
 
-			Lobby[] lobbies = new Lobby[list.Value.LobbiesMatching];
+			ILobby[] lobbies = new ILobby[list.Value.LobbiesMatching];
 
 			for ( int i = 0; i < list.Value.LobbiesMatching; i++ )
 			{
