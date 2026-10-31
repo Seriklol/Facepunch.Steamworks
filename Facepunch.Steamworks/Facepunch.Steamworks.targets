@@ -1,4 +1,4 @@
-﻿<Project>
+<Project>
 
 	<PropertyGroup>
 		<RestoreProjectStyle>PackageReference</RestoreProjectStyle>
