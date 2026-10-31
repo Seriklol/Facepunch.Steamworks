@@ -16,9 +16,9 @@ namespace Steamworks
 			SetupInterface( IsGameServer );
 		}
 		
-		[DllImport( Platform.LibraryName, EntryPoint = "SteamAPI_SteamUGC_v020", CallingConvention = Platform.CC)]
-		internal static extern IntPtr SteamAPI_SteamUGC_v020();
-		public override IntPtr GetUserInterfacePointer() => SteamAPI_SteamUGC_v020();
+		[DllImport( Platform.LibraryName, EntryPoint = "SteamAPI_SteamUGC_v021", CallingConvention = Platform.CC)]
+		internal static extern IntPtr SteamAPI_SteamUGC();
+		public override IntPtr GetUserInterfacePointer() => SteamAPI_SteamUGC();
 		[DllImport( Platform.LibraryName, EntryPoint = "SteamAPI_SteamGameServerUGC_v020", CallingConvention = Platform.CC)]
 		internal static extern IntPtr SteamAPI_SteamGameServerUGC_v020();
 		public override IntPtr GetServerInterfacePointer() => SteamAPI_SteamGameServerUGC_v020();

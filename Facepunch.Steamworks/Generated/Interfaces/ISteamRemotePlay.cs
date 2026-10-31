@@ -16,9 +16,9 @@ namespace Steamworks
 			SetupInterface( IsGameServer );
 		}
 		
-		[DllImport( Platform.LibraryName, EntryPoint = "SteamAPI_SteamRemotePlay_v002", CallingConvention = Platform.CC)]
-		internal static extern IntPtr SteamAPI_SteamRemotePlay_v002();
-		public override IntPtr GetUserInterfacePointer() => SteamAPI_SteamRemotePlay_v002();
+		[DllImport( Platform.LibraryName, EntryPoint = "SteamAPI_SteamRemotePlay_v004", CallingConvention = Platform.CC)]
+		internal static extern IntPtr SteamAPI_SteamRemotePlay();
+		public override IntPtr GetUserInterfacePointer() => SteamAPI_SteamRemotePlay();
 		
 		
 		#region FunctionMeta

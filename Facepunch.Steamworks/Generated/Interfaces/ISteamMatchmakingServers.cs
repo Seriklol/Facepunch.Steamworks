@@ -16,9 +16,9 @@ namespace Steamworks
 			SetupInterface( IsGameServer );
 		}
 		
-		[DllImport( Platform.LibraryName, EntryPoint = "SteamAPI_SteamMatchmakingServers_v002", CallingConvention = Platform.CC)]
-		internal static extern IntPtr SteamAPI_SteamMatchmakingServers_v002();
-		public override IntPtr GetUserInterfacePointer() => SteamAPI_SteamMatchmakingServers_v002();
+		[DllImport( Platform.LibraryName, EntryPoint = "SteamAPI_SteamMatchmakingServers_v003", CallingConvention = Platform.CC)]
+		internal static extern IntPtr SteamAPI_SteamMatchmakingServers();
+		public override IntPtr GetUserInterfacePointer() => SteamAPI_SteamMatchmakingServers();
 		
 		
 		#region FunctionMeta
